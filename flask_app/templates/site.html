@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <a href="http://127.0.0.1:5000/make">Report Sighting</a>
+    <br>
+    <a href="http://127.0.0.1:5000/">LOGOUT</a>
+    <h1>Sasquatch sight</h1>
+    {{name}}
+    <br>
+    <hr>
+    {% for i in it %}
+        <h2>{{i.location}} on {{i.date}}</h2>
+    
+        <h3>
+            what happened?
+        </h3>
+        {{i.what}}
+        <h3># of them</h3>
+        {{i.number}}
+        report by: {{i.reported}}
+    {%endfor%}
+</body>
+</html>
