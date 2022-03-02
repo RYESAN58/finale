@@ -64,7 +64,7 @@ def edit():
         if not Sighting.validate(request.form):
             x = session['user']
             return redirect(f"/update/{request.form['id']}")
-        Sighting.create(data)
+        Sighting.up(data)
         x = session['user']
         return redirect(f'dashboard/{x}')
 ##############################################################################
